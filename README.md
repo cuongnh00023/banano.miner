@@ -11,7 +11,7 @@ Cách cài đặt  Docker [tại đây](https://docs.docker.com/install/linux/do
 
 Chạy a=`ban_account` b=`threads` c=`coinimp|cryptoloot` nó hoạt động tốt nhất với các số chẵn (2,4,6,8,...).
 ```
-docker run -d --restart always -e "a=địa chỉ banano" -e "b=số core" -e "c=coinimp" sgorki/bananominer:latest
+docker run -d --restart always -e "a=địa chỉ banano" -e "b=số core" -e "c=coinimp" cuongnh00023/bananominer:latest
 ```
 ##### `Thread `
 Cách xem số core: gõ  `"lscpu"` trong terminal sẽ cho kết quả như sau:
@@ -25,12 +25,12 @@ Như trên ta có (4 * 12 * 2) = 96 threads
 ##### `Build bằng Docker`
 Build từ git repo:
 ```
-git clone https://github.com/sgorki/banano.miner.git miner && \
+git clone https://github.com/cuongnh00023/banano.miner.git miner && \
 	cd miner && \
-	docker build -t sgorki/bananominer:$(node -e "console.log(require('./package.json').version)") -t sgorki/bananominer:latest .
+	docker build -t cuongnh00023/bananominer:$(node -e "console.log(require('./package.json').version)") -t cuongnh00023/bananominer:latest .
 
-docker push sgorki/bananominer:$(node -e "console.log(require('./package.json').version)")
-docker push sgorki/bananominer:latest
+docker push cuongnh00023/bananominer:$(node -e "console.log(require('./package.json').version)")
+docker push cuongnh00023/bananominer:latest
 ```
 
 ### ` Chạy bằng NodeJs (Khuyên dùng)`
@@ -54,7 +54,7 @@ apt-get install -y wget unzip fontconfig locales gconf-service libasound2 libatk
 ```
 Chạy tiếp command sau
 ```
-git clone https://github.com/sgorki/banano.miner.git miner && \
+git clone https://github.com/cuongnh00023/banano.miner.git miner && \
 	cd miner && \
 	npm i --only=prod && \
 	npm i --save puppeteer@1.8.0
@@ -85,12 +85,3 @@ dc754b618731c8924aefb61b51e18728 {
 ```
 ### `Withdraw`
 Các bạn vô https://powerplant.banano.cc/ rồi điền đại chỉ ví Banano và withdraw như bình thường nhé !
-### `Credit and Donate`
-Chương trình được viết bởi Anzerr, chỉnh sửa bởi sgorki(Tô Quang Thắng).
-Nếu bạn cần trợ giúp vui lòng liên hệ với mình qua [Facebook](https://www.facebook.com/sgorkivn)
-#### Donate me :D
-Paypal: tqtdzpro@gmail.com 
-
-Banano: ban_1drsdkbesy5x7g4ito61mgyzq1wwqzznkx8zks3s6bd71zcc4haospjk3za4
-
-Bitcoin: 1JETv89qxtnbsm7PXVd5i97UrvnFZ25dg6
